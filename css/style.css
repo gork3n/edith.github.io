@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700,900&display=swap');
+
+/*Define CSS Attributes*/
+
+body, html {
+    margin: 10px;
+    padding: 0;
+    height: 100vh;
+    background: #242E42;
+    color: #fff;
+    word-wrap: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    color: #CDD3DD;
+    font-weight: 300;
+    font-size: 17px;
+}
+/*########Grid Cheat Sheet#########
+grid-area row start / column start / row end / column end 
+#################################*/
+
+/* Grid Layout */
+.container {
+    height: 96vh;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 200px 22% 1fr;
+    grid-template-rows: 67px 1fr 150px;
+    grid-template-areas: 
+    "header header header"
+    "aside content content"
+    "footer footer footer";
+}
+
+header {
+    grid-area: header;
+    border-bottom: 4px solid #44556B;
+}
+
+.clock-date {
+    margin-top: -35px;
+    justify-self: start;
+    text-align: right;
+}
+
+nav {
+    grid-area: clock;
+    text-justify: auto;
+    text-align: right;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+nav {
+    grid-area: 1 / 2 / 1 / 4;
+    
+}
+
+aside {
+    margin: 0;
+    padding: 0;
+    grid-area: aside;
+    align-self: start;
+    justify-content: center;
+}
+
+aside > button {
+    width: 100%;
+    height: 50px;
+    margin-left: 0px;
+    position: relative;
+    padding: 0 1px;
+    align-items: center;
+    text-align: left;
+    background: none;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto' sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+aside > button {
+    height: 45px;
+    width: 100%;
+    margin-bottom: 5px;
+    text-align: center;
+    vertical-align: center;
+}
+
+aside > button .overview {
+    position: relative;
+    padding-left: 5px;
+    margin-left: -5px;
+    height: 45px;
+    line-height: 45px;
+    background: linear-gradient(
+        to right, 
+        #1F8EFA,
+        #1F8EFA 5%,
+        #131A27 5%,
+        #131A27 100%
+    );
+
+}
+
+aside > button img {
+    padding-left: 15px;
+    left: 10%;
+    margin-left: -15px; /* 1/2 of total width of your img */
+    top: 50%;
+    margin-top: -15px; /* 1/2 of total height of your img */
+    position: absolute;
+}
+
+aside > button > span {
+    text-align: right;
+    vertical-align: center;
+    padding-left: 50px;
+    padding-bottom: 3px;
+}
+
+.placeholder {
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    padding-top: 20%;
+    padding-bottom: 10px;
+    align-content: space-evenly;
+}
+
+.placeholder > img {
+    width: 100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+}
+
+.placeholderimg {
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+}
+
+.username {
+    text-align: center;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.address {
+    padding-top: 3px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+main {
+    grid-area: content;
+    height: 100%;
+    margin-right: 10px;
+    min-width: 0;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 80px 1fr 1fr 1fr;
+    gap: 10px;
+    grid-template-areas: 
+    "h h h h s"
+    "a a a b b"
+    "a a a c d"
+    "e e e e e";
+    position: relative;
+}
+
+main > div:nth-child(2) {
+    max-width: 100%;
+    position: absolute;
+    right: 5px;
+    top: 60px;
+}
+.weather-info {
+    display: grid;
+    grid-template-columns: repeat(3 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: .5em;
+    grid-template-areas: 
+    "weather weather other"
+    "wbottom wbottom wbottom";
+}
+
+.location {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    line-height: 1em;
+}
+
+.temperature-degree {
+    font-family: 'Roboto' sans-serif;
+    font-weight: 300;
+    font-size: 3.2em;
+    display: inline-block;
+}
+
+
+
+.title {
+    grid-area: h;
+    float: right;
+    min-width: 0;
+    max-width: 100%;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    text-align: left;
+}
+
+.camera {
+    max-width: 100%;
+    overflow: hidden;
+    grid-area: a;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-right: 10px;
+    background-color: #44556B;
+    border-radius: 3px;
+}
+.weather-container {
+    grid-area: weather;
+}
+.weather {
+    margin: 5px;
+    
+}
+
+.other {
+    grid-area: other;
+}
+
+.wbottom {
+    grid-area: wbottom;
+}
+
+.roomconsump {
+    margin-right: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    grid-area: b;
+    height: 100%;
+    width: 100%;
+    background-color: #44556B;
+    z-index: 1;
+    border-radius: 3px;
+}
+
+.dayconsump {
+    margin-right: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+    grid-area: c;
+    height: 100%;
+    width: 100%;
+    background-color: #44556B;
+    border-radius: 3px;
+}
+
+.devicelimit {
+    margin-right: 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    grid-area: d;
+    height: 100%;
+    width: 100%;
+    background-color: #44556B;
+    border-radius: 3px;
+}
+
+.unitstatus {
+    margin-right: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+    grid-area: e;
+    height: 100%;
+    width: 100%;
+    background-color: #44556B;
+    border-radius: 3px;
+}
+
+footer {
+    grid-area: 3 / 1 / 4 / 4;
+    padding: 10px;
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows:  1px 1fr;
+    grid-template-areas: 
+    "hr hr hr hr hr hr hr"
+    "fa fb fc fd fe ff fg";
+    
+}
+
+.hr-bottom {
+    grid-area: hr;
+    width: 100%;
+    border-top: 4px solid #44556B;
+}
+
+.add-device {
+    grid-area: fa;
+    /* Center Items Vertically */
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    margin: auto;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 600;
+    font-size: 75px;
+    border-style: dashed;
+    border-radius: 8px;
+    border-color: #2F3B52;
+}
+
+.outlets-device {
+    grid-area: fb;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    font-family: 'Roboto' sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.camera-device {
+    grid-area: fc;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.lights-device {
+    grid-area: fd;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.wifi-device {
+    grid-area: fe;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.thermostats-device {
+    grid-area: ff;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.music-device {
+    grid-area: fg;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    background-color: #2F3B52;
+    border-radius: 8px;
+}
+
+.search {
+    height:100%;
+    width:100%;
+    color: #fff;
+    align-content: left;
+    font-family: 'Roboto', sans-serif;
+}
+
+.search input[type=text] {
+    width:100%;
+    padding: 12px 5px;
+    border: none;
+    background: none;
+    text-align: left;
+    color: #fff;
+    font-size: 17px;
+}
+
+::placeholder {
+    color: #fff;
+    text-align: left;
+    opacity: 0.8;
+}
+

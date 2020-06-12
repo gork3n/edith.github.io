@@ -1,21 +1,144 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Edith GitHub</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        Hello World 
-        <script src="" async defer></script>
-    </body>
+<html lang=en>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css\style.css">
+<title>Edith Dashboard - Overview</title>
+</head>
+
+<body>
+    <grid class="container">
+        <header>
+        
+            <div class="logo"><img src="images/Logo.png"></div>
+
+            <div class="clock-date">
+            
+                <div id="date"></div>
+        
+                <div id="clock" onload="showTime()"></div>
+            
+            </div>
+
+        </header>    
+        
+        <aside>
+            <div class="placeholder"><img src="images/profile_placeholder.png" alt="Profile Placeholder" class="placeholderimg"></div>
+            <div class="username" id="username">Placeholder User</div>
+            <div class="address">123 address placeholder</div>
+            <button>
+                <div class="overview"><div><img src="images/overview-active.png" /> <span>Overview</span></div></div>
+            </button>
+            <button>
+                <div class="devices"><div><img src="images/device-inactive.png" /> <span>Devices</span></div></div>
+            </button>
+            <button>
+                <div class="analytics"><img src="images/analytics-inactive.png" /> <span>Analytics</span></div>
+            </button>
+            <button>
+                <div class="rules"><img src="images/rules-inactive.png" /> <span>Rules</span></div>
+            </button>
+            <button>
+                <div class="gallery"><img src="images/gallery-inactive.png" /> <span>Gallery</span></div>
+            </button>
+            <button>
+                <div class="history"><img src="images/history.png" /> <span>History</span></div>
+            </button>
+            <button>
+                <div class="settings"><img src="images/settings-inactive.png" /> <span>Settings</span></div>
+            </button>
+        
+        
+        </aside>
+        <main>
+            
+            <div class="title">
+            
+                <h1>Overview</h1>
+            
+            </div>
+            <div>
+            
+                <img src="images/settings-two.png" />
+            
+            </div>            
+            
+            <section class="weather-info camera">
+            
+                <div class="weather-container">
+                    <div class=weather>
+                        <div class="location">
+                            <div>Timezone</div>
+                            <h2 class="location-timezone">loading...</h2>
+                            <p>Icon</p>
+                            <div class="temperature">
+                                <h1 class="temperature-degree">loading...</h1>
+                                <span>F</span>
+                                <div class="temperature-description">Cold</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="other">More side information</div>
+
+                <div class="wbottom">More bottom information</div>
+            
+            
+            </section>
+            
+            <section class="roomconsump">
+            
+                <h2>Room Consumption</h2>
+            
+            </section>
+            
+            <section class="dayconsump">
+            
+                <h2>Day Consumption</h2>
+            
+            </section>
+            
+            <section class="devicelimit">
+            
+                <h2>Device Limit</h2>
+            
+            </section>
+            
+            <section class="unitstatus">
+            
+                <h2>Status by units</h2>
+            
+            </section>
+
+        </main>
+        
+        <footer>
+            <div class="hr-bottom">
+
+            </div>
+            
+            <div class="add-device">+</div>
+            
+            <div class="outlets-device"><div>Outlets</div></div>
+            
+            <div class="camera-device">Camera</div>
+            
+            <div class="lights-device">Lights</div>
+            
+            <div class="wifi-device">Wifi</div>
+            
+            <div class="thermostats-device">Thermostats</div>
+            
+            <div class="music-device">Music</div>
+        
+        </footer>   
+    
+    </grid>
+    
+    <script src="js/function.js"></script>
+    <script src="js/weather.js"></script>
+
+</body>
+
 </html>
