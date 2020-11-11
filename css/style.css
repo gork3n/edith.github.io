@@ -9,6 +9,7 @@ body, html {
     background: #242E42;
     color: #fff;
     word-wrap: none;
+    overflow: hidden;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -309,9 +310,9 @@ main > div:nth-child(2) {
 
 footer {
     grid-area: 3 / 1 / 4 / 4;
-    padding: 10px;
     display: grid;
-    gap: 10px;
+    margin: 5px;
+    gap: 5px;
     text-align: center;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows:  1px 1fr;
@@ -331,8 +332,9 @@ footer {
     grid-area: fa;
     /* Center Items Vertically */
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    margin-top: 3px;
+    height: 136px;
+    line-height: 140px;
     margin: auto;
     font-family: 'Roboto' sans-serif;
     font-weight: 600;
@@ -344,9 +346,11 @@ footer {
 
 .outlets-device {
     grid-area: fb;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     font-family: 'Roboto' sans-serif;
     font-weight: 600;
     font-size: 15px;
@@ -356,45 +360,55 @@ footer {
 
 .camera-device {
     grid-area: fc;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     background-color: #2F3B52;
     border-radius: 8px;
 }
 
 .lights-device {
     grid-area: fd;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     background-color: #2F3B52;
     border-radius: 8px;
 }
 
 .wifi-device {
     grid-area: fe;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     background-color: #2F3B52;
     border-radius: 8px;
 }
 
 .thermostats-device {
     grid-area: ff;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     background-color: #2F3B52;
     border-radius: 8px;
 }
 
 .music-device {
     grid-area: fg;
+    margin-left: 3px;
+    margin-top: 3px;
     width: 100%;
-    height: 150px;
-    line-height: 150px;
+    height: 140px;
+    line-height: 140px;
     background-color: #2F3B52;
     border-radius: 8px;
 }
