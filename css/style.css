@@ -274,6 +274,11 @@ main > div:nth-child(2) {
     border-radius: 3px;
 }
 
+.roomconsump h2 {
+    margin: 0;
+    padding: 3px;
+}
+
 .dayconsump {
     margin-right: 10px;
     margin-bottom: 50px;
@@ -284,6 +289,10 @@ main > div:nth-child(2) {
     width: 100%;
     background-color: #44556B;
     border-radius: 3px;
+}
+
+.dayconsump h2 {
+    padding-left: 3px;
 }
 
 .devicelimit {
